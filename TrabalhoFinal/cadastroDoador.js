@@ -8,7 +8,7 @@ function cadastrarDoador() {
     const idade = prompt ("Qual sua idade?")
     const peso =  prompt ("Qual seu peso?")
     const tipoSanguineo =  prompt ("Qual seu tipo sanguineo?")
-    const ultimaDoacao = prompt ("Quando foi sua ultima doação? (dd/mm/aaaa")
+    const ultimaDoacao = prompt ("Quando foi sua ultima doação? (dd/mm/aaaa)")
   
     //As informações de cada usuário vão ser armazenadas neste objeto
     const doador = {
@@ -53,14 +53,16 @@ function cadastrarDoador() {
     resultado += "========================\n";
     
     for (let doador of doadores){
+      if (tipoSanguineo === doador.tipoSanguineo){
+      
       resultado += `\n NOME: ${doador.nome}`
       resultado += `\n IDADE: ${doador.idade}`
       resultado += `\n PESO: ${doador.peso}`
       resultado += `\n TIPO SANGUINIO: ${doador.tipoSanguineo}`
       resultado += `\n ÚLTIMA DOAÇÃO: ${doador.ultimaDoacao}`
-  };
+      }   
+    }
     //Aqui vai o código que busca doadores por tipo sanguíneo
-
     console.log(resultado);
   }
   
@@ -75,13 +77,15 @@ function cadastrarDoador() {
   
     //Aqui vai o código que busca os doadores por data da última doação
     for (let doador of doadores){
+      if (dataDesejada === doador.ultimaDoacao){
+      
       resultado += `\n NOME: ${doador.nome}`
       resultado += `\n IDADE: ${doador.idade}`
       resultado += `\n PESO: ${doador.peso}`
       resultado += `\n TIPO SANGUINIO: ${doador.tipoSanguineo}`
       resultado += `\n ÚLTIMA DOAÇÃO: ${doador.ultimaDoacao}`
-  };
-  
+      }   
+    }
     console.log(resultado);
   }
   
