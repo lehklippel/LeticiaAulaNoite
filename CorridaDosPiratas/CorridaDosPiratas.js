@@ -9,7 +9,7 @@ function cadastrarTripulacoes() {
     const infTripulacao = {
         nomeTripulacao: nomeTripulacao,
         nomeCapitao: nomeCapitao,
-        avanco: 0 // Inicializa a propriedade "avanco" para cada tripulação
+        avanco: 0 
     };
     tripulacoes.push(infTripulacao);
   }
@@ -41,7 +41,7 @@ function rolarDado() {
 // Função para avançar uma etapa
 function avancarEtapa(tripulacao) {
     const avanco = rolarDado();
-    tripulacao.avanco += avanco; // Atualiza a propriedade "avanco" da tripulação
+    tripulacao.avanco += avanco; 
     return avanco;
 }
 
